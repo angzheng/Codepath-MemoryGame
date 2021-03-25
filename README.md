@@ -4,9 +4,10 @@
 
 Submitted by: **Angelina Zheng**
 
-Time spent: **3** hours spent in total
+Time spent: **3.5** hours spent in total
 
 Link to project: https://innate-carnelian-titanosaurus.glitch.me/
+https://www.w3schools.com/css/css3_buttons.asp
 
 
 ## Required Functionality

@@ -3,21 +3,29 @@ const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 //Global Variables
-const clueHoldTime = 700; //how long to hold each clue's light/sound
-var pattern = [2, 5, 1, 4, 3, 5, 1, 6, 3, 5, 2];
+var clueHoldTime = 700; //how long to hold each clue's light/sound
+var randPattern = new Array(10); 
 var progress = 0; 
 var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5;  //must be between 0.0 and 1.0
 var guessCounter = 0;
 
+function generatePattern() {
+  for (let i=0;i<10;i++) {
+    randPattern[i] = getRandomInt(1, 7);
+  }  
+}
+
 function startGame(){
   //initialize game variables
   progress = 0;
   gamePlaying = true;
+  generatePattern();
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
   playClueSequence();
+  
 }
 function stopGame(){
     //initialize game variables
@@ -85,12 +93,12 @@ function playClueSequence(){
   guessCounter = 0;
   let delay = nextClueWaitTime; //set delay to initial wait time
   for(let i=0;i<=progress;i++){ // for each clue that is revealed so far
-    console.log("play single clue: " + pattern[i] + " in " + delay + "ms")
-    setTimeout(playSingleClue,delay,pattern[i]) // set a timeout to play that clue
+    console.log("play single clue: " + randPattern[i] + " in " + delay + "ms")
+    setTimeout(playSingleClue,delay,randPattern[i]) // set a timeout to play that clue
     delay += clueHoldTime 
     delay += cluePauseTime;
   }
-  clueHoldTime -= 10;
+  clueHoldTime -= 30;
 }
 
 function loseGame(){
@@ -110,10 +118,10 @@ function guess(btn){
   }
 
   // add game logic here
-  if (pattern[guessCounter] == btn) {
+  if (randPattern[guessCounter] == btn) {
     //guess is correct
     if (guessCounter == progress) {
-      if (progress == pattern.length - 1) {
+      if (progress == randPattern.length - 1) {
         // Win! Game ends
         winGame();
       }
@@ -133,4 +141,10 @@ function guess(btn){
     // Lose! Game Ends
     loseGame();
   }
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }

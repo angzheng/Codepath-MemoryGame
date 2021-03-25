@@ -7,7 +7,7 @@ Submitted by: **Angelina Zheng**
 Time spent: **3.5** hours spent in total
 
 Link to project: https://innate-carnelian-titanosaurus.glitch.me/
-https://www.w3schools.com/css/css3_buttons.asp
+
 
 
 ## Required Functionality
@@ -48,7 +48,7 @@ Here's a walkthrough of implemented user stories:
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 https://www.rapidtables.com/web/css/css-color.html
 https://developer.mozilla.org/en-US/docs/web/javascript/reference/global_objects/math/random
-
+https://www.w3schools.com/css/css3_buttons.asp
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 The tutorial was straightforward and very well-structured, so the only challenge from the required game 

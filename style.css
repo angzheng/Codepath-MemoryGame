@@ -53,3 +53,17 @@ button {
     background:yellow;
 }
 
+#button5 {
+    background: lavender;
+}
+#button5:active, #button5.lit {
+    background:purple;
+}
+
+#button6 {
+    background: sandybrown;
+}
+#button6:active, #button6.lit {
+    background:darkorange;
+}
+

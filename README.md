@@ -40,7 +40,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![](https://i.imgur.com/LMyeDxx.gif)
+![](https://i.imgur.com/38Rchs5.gif)
 
 
 ## Reflection Questions
@@ -73,10 +73,12 @@ Furthermore, how can APIs be used to work with third party data?
 If I had a few more hours to work on this project, I would create original, digital drawings 
 and add them to every one of the four buttons to make the game more interesting. 
 I could then use the “hidden" class to hide the image until the user clicks on the button. 
-Currently, the four buttons in my project play the musical notes A, D, G, and E similar to the strings on a violin. 
+Currently, the four buttons in my project play the musical notes A, D, G, B, C, and E. 
 I could instead find audio clips of excerpts from songs as the sound played from each button. 
 Instead of using an index to access different frequencies in freqMap, 
-the index would access different audio clips for each button. 
+the index would access different audio clips for each button. I would also include randomly
+generated patterns and add a gif or image in the site's background that changes every time the 
+user correctly guesses a turn.
 
 
 

@@ -4,9 +4,10 @@
 
 Submitted by: **Angelina Zheng**
 
-Time spent: **3** hours spent in total
+Time spent: **3.5** hours spent in total
 
 Link to project: https://innate-carnelian-titanosaurus.glitch.me/
+https://www.w3schools.com/css/css3_buttons.asp
 
 
 ## Required Functionality
@@ -46,6 +47,7 @@ Here's a walkthrough of implemented user stories:
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 https://www.rapidtables.com/web/css/css-color.html
+https://developer.mozilla.org/en-US/docs/web/javascript/reference/global_objects/math/random
 
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
@@ -55,11 +57,15 @@ button was clicked by the user. The issue did not appear to be in the logic of t
 still able to guess, and all counters keeping track of progress were correctly updating. Due to the clean structure of the code, 
 it was quick to identify that the problem originated in the rules for the buttons in the style.css file. 
 The mistake was a missing comma between the selectors, and after fixing that mistake, the code worked completely. 
+The challenge that took the longest to solve was speeding up the playback of the sequence. At first, the speed seemed
+to stay the same. I realized that I was decrementing clueHoldTime inside the for loop of the playClueSequence()
+function. After moving the statement outside of the for loop, I also noticed that I forgot to change clueHoldTime
+from a global constant to a variable. These adjustments solved the problem.
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
 What are aspects to consider when choosing one programming language over another for web development? 
 What are some useful tools that can be used to test web code? 
-Due to the clean structure of the project code, it was easy to debug a problem I encountered
+Because of the well-organized structure of the project code, it was easy to debug a problem I encountered
 with my code from simply using the console. However, with larger applications it would be more difficult
 to target specific sections of code when finding mistakes. 
 One note included in the tutorial is that it is important to choose a web-safe font,
@@ -73,12 +79,18 @@ Furthermore, how can APIs be used to work with third party data?
 If I had a few more hours to work on this project, I would create original, digital drawings 
 and add them to every one of the four buttons to make the game more interesting. 
 I could then use the “hidden" class to hide the image until the user clicks on the button. 
-Currently, the four buttons in my project play the musical notes A, D, G, B, C, and E. 
+In the structure of the code, I would combine the winGame() and loseGame() functions into one function since they
+perform similar tasks. The only difference is the display message, so I would use a boolean variable
+to determine if the displayed message should be for winning or losing the game.
+Currently, the six buttons in my project play the musical notes A, D, G, B, C, and E. 
 I could instead find audio clips of excerpts from songs as the sound played from each button. 
 Instead of using an index to access different frequencies in freqMap, 
-the index would access different audio clips for each button. I would also include randomly
-generated patterns and add a gif or image in the site's background that changes every time the 
-user correctly guesses a turn.
+the index would access different audio clips for each button. I would also add a gif or image in the site's background that is used to tally every time the 
+user correctly guesses a turn. For example, there could be a flower stem, and every time
+the user guesses correctly, a petal is added. 
+Another idea is to implement an easy and hard mode. The easy mode remains the exact same as the current game.
+In the hard mode, the buttons would change color to distract the player, so the player would have to remember the pattern
+by the notes/frequencies played or the position of the buttons. 
 
 
 

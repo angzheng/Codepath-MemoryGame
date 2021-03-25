@@ -16,6 +16,7 @@ button {
   padding: 15px;
   border-radius: 15px;
 }
+
 #gameButtonArea > button {
   width:170px;
   height:170px;
@@ -31,12 +32,18 @@ button {
 #button1:active, #button1.lit {
     background:green;
 }
+#button1:hover {
+    border: 4px solid green;
+}
 
 #button2 {
     background: lightblue;
 }
 #button2:active, #button2.lit {
     background:blue;
+}
+#button2:hover {
+    border: 4px solid blue;
 }
 
 #button3 {
@@ -45,12 +52,18 @@ button {
 #button3:active, #button3.lit {
     background:red;
 }
+#button3:hover {
+    border: 4px solid red;
+}
 
 #button4 {
     background: lightyellow;
 }
 #button4:active, #button4.lit {
     background:yellow;
+}
+#button4:hover {
+    border: 4px solid yellow;
 }
 
 #button5 {
@@ -59,11 +72,17 @@ button {
 #button5:active, #button5.lit {
     background:purple;
 }
+#button5:hover {
+    border: 4px solid purple;
+}
 
 #button6 {
     background: sandybrown;
 }
 #button6:active, #button6.lit {
     background:darkorange;
+}
+#button6:hover {
+    border: 4px solid darkorange;
 }
 
